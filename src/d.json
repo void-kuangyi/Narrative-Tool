@@ -1,0 +1,44 @@
+{
+    "level0": [
+        null,
+        {
+            "value": 1,
+            "children": [
+                [
+                    {
+                        "value": 2
+                    }
+                ]
+            ]
+        },
+        {
+            "value": 1,
+            "children": [
+                [
+                    {
+                        "value": 3
+                    }
+                ]
+            ]
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+            "value": 1,
+            "children": [
+                []
+            ]
+        },
+        {
+            "value": 1,
+            "children": [
+                []
+            ]
+        }
+    ],
+    "level1": [],
+    "level2": []
+}
