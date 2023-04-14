@@ -1,64 +1,74 @@
-const generateTreeGraph = () => {
-  // User inputs
-  const userInputs = [
-    [0, 1, 1, 0, 0, 0, 0, 0, 1, 1],
-    [0, 0, 0, 2, 0, 3, 0, 0],
-    [0, 0, 1, 0, 1, 0, 3, 0, 1],
-  ];
+var fs = require("fs");
+var data = require("./data.json");
 
-  // Root node of the tree
-  const rootNode = {};
+function transformData(jsonData) {
+  // Create a root node for the transformed data
+  let rootNode = {
+    name: jsonData[0].text,
+    count: 0,
+    children: [],
+  };
 
-  // Get the number of levels in the tree
-  const numLevels = userInputs.length;
+  // Loop through the JSON data and transform each node
+  for (let i = 1; i < jsonData.length; i++) {
+    let jsonNode = jsonData[i];
 
-  // Loop through each level
-  for (let i = 0; i < numLevels; i++) {
-    const levelInput = userInputs[i];
-    const numNodes = levelInput.length;
+    // Create a new node with the same properties as the JSON node
+    let node = {
+      name: jsonNode.text,
+      count: jsonNode.count,
+      parent: jsonData[i - 1].text,
+      children: [],
+    };
 
-    // Initialize node array for this level
-    const levelNodes = [];
-
-    // Loop through each answer in the level input
-    for (let j = 0; j < numNodes; j++) {
-      const answer = levelInput[j];
-      if (answer !== 0) {
-        // Create a new node with the corresponding answer value
-        const node = { value: answer };
-        levelNodes.push(node);
-      } else {
-        // Push a null value to represent a missing node
-        levelNodes.push(null);
-      }
-    }
-
-    // Set the node array as the children of the parent node of the previous level
-    if (i > 0) {
-      const parentNodes = rootNode[`level${i - 1}`];
-      parentNodes.forEach((parentNode, index) => {
-        if (parentNode !== null) {
-          if (!parentNode.children) {
-            parentNode.children = [];
-          }
-          parentNode.children.push(
-            levelNodes
-              .slice(index * 2, index * 2 + 2)
-              .filter((node) => node !== null)
-          );
-        }
-      });
-    }
-
-    // Set the node array as the root node if this is the first level
-    if (i === 0) {
-      rootNode[`level${i}`] = levelNodes;
+    // Add the node to its parent's children array
+    let parentNode = findNode(node.parent, rootNode);
+    if (parentNode) {
+      parentNode.children.push(node);
     } else {
-      rootNode[`level${i}`] = [];
+      rootNode.children.push(node);
     }
   }
 
-  console.log(JSON.stringify(rootNode));
+  // Return the transformed data
+  return rootNode;
+}
+
+function findNode(parent, node) {
+  if (node.name === parent) {
+    return node;
+  } else {
+    for (let i = 0; i < node.children.length; i++) {
+      let found = findNode(parent, node.children[i]);
+      if (found) {
+        return found;
+      }
+    }
+    return null;
+  }
+}
+
+const generateTreeGraph = () => {
+  // var json = JSON.parse(data);
+  var oldObj = {};
+  var obj = transformData(data[0].choices);
+
+  // const choices = data[0].choices;
+  // choices.forEach(({ index, text, type, input }) => {
+  //   var childObj = {
+  //     name: text,
+  //     count: 0,
+  //     children: [],
+  //   };
+  //   obj = {
+  //     name: oldObj.name,
+  //     children: [childObj],
+  //     oldObj,
+  //   };
+  //   oldObj = obj;
+  // });
+
+  fs.writeFile("myjsonfile.json", JSON.stringify(obj), "utf8", () => {});
 };
 
-export default generateTreeGraph;
+generateTreeGraph();

@@ -1,0 +1,77 @@
+{
+    "name": "Ik ben klaar om te beginnen!",
+    "count": 0,
+    "children": [
+        {
+            "name": "Ik zeg: \"Ja, daar heb ik wel eens van gehoord\".",
+            "parent": "Ik ben klaar om te beginnen!",
+            "children": [
+                {
+                    "name": "Ik heb weinig vertrouwen dat mijn arts suggesties geeft die waardevol kunnen zijn voor mij.",
+                    "parent": "Ik zeg: \"Ja, daar heb ik wel eens van gehoord\".",
+                    "children": [
+                        {
+                            "name": "Hmmmm, i don't know?",
+                            "parent": "Ik heb weinig vertrouwen dat mijn arts suggesties geeft die waardevol kunnen zijn voor mij.",
+                            "children": [
+                                {
+                                    "name": "Verder gaan",
+                                    "parent": "Hmmmm, i don't know?",
+                                    "children": [
+                                        {
+                                            "name": "Ik zeg: \"Ja graag, ik ben benieuwd naar het onderzoek, en wil hier graag meer informatie over.\"",
+                                            "parent": "Verder gaan",
+                                            "children": [
+                                                {
+                                                    "name": "Ik zeg: \"Ik wil meer weten over de praktische zaken van het onderzoek: de duur, het aantal bezoeken, de metingen, en de vergoeding.\"",
+                                                    "parent": "Ik zeg: \"Ja graag, ik ben benieuwd naar het onderzoek, en wil hier graag meer informatie over.\"",
+                                                    "children": [
+                                                        {
+                                                            "name": "Ik zeg: \"Ik wil graag meer informatie over het onderzoek.\"",
+                                                            "parent": "Ik zeg: \"Ik wil meer weten over de praktische zaken van het onderzoek: de duur, het aantal bezoeken, de metingen, en de vergoeding.\"",
+                                                            "children": [
+                                                                {
+                                                                    "name": "Ik zeg: \"Ik wil meer weten over de mogelijke bijwerkingen en andere nadelige effecten.\"",
+                                                                    "parent": "Ik zeg: \"Ik wil graag meer informatie over het onderzoek.\"",
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "Ik zeg: \"Ik heb alle informatie die ik nodig heb om te beslissen of ik wel of niet deel wil nemen aan het onderzoek.\"",
+                                                                            "parent": "Ik zeg: \"Ik wil meer weten over de mogelijke bijwerkingen en andere nadelige effecten.\"",
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "Ik zeg: \"Ik denk dat ik niet wil mee doen aan het onderzoek.\"",
+                                                                                    "parent": "Ik zeg: \"Ik heb alle informatie die ik nodig heb om te beslissen of ik wel of niet deel wil nemen aan het onderzoek.\"",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": ":D ",
+                                                                                            "parent": "Ik zeg: \"Ik denk dat ik niet wil mee doen aan het onderzoek.\"",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "Nope",
+                                                                                                    "parent": ":D ",
+                                                                                                    "children": []
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
