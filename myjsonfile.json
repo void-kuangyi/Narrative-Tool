@@ -4,51 +4,89 @@
     "children": [
         {
             "name": "Ik zeg: \"Ja, daar heb ik wel eens van gehoord\".",
+            "count": 0,
             "parent": "Ik ben klaar om te beginnen!",
             "children": [
                 {
                     "name": "Ik heb weinig vertrouwen dat mijn arts suggesties geeft die waardevol kunnen zijn voor mij.",
+                    "count": 0,
                     "parent": "Ik zeg: \"Ja, daar heb ik wel eens van gehoord\".",
                     "children": [
                         {
                             "name": "Hmmmm, i don't know?",
+                            "count": 0,
                             "parent": "Ik heb weinig vertrouwen dat mijn arts suggesties geeft die waardevol kunnen zijn voor mij.",
                             "children": [
                                 {
                                     "name": "Verder gaan",
+                                    "count": 0,
                                     "parent": "Hmmmm, i don't know?",
                                     "children": [
                                         {
                                             "name": "Ik zeg: \"Ja graag, ik ben benieuwd naar het onderzoek, en wil hier graag meer informatie over.\"",
+                                            "count": 0,
                                             "parent": "Verder gaan",
                                             "children": [
                                                 {
                                                     "name": "Ik zeg: \"Ik wil meer weten over de praktische zaken van het onderzoek: de duur, het aantal bezoeken, de metingen, en de vergoeding.\"",
+                                                    "count": 0,
                                                     "parent": "Ik zeg: \"Ja graag, ik ben benieuwd naar het onderzoek, en wil hier graag meer informatie over.\"",
                                                     "children": [
                                                         {
                                                             "name": "Ik zeg: \"Ik wil graag meer informatie over het onderzoek.\"",
+                                                            "count": 0,
                                                             "parent": "Ik zeg: \"Ik wil meer weten over de praktische zaken van het onderzoek: de duur, het aantal bezoeken, de metingen, en de vergoeding.\"",
                                                             "children": [
                                                                 {
                                                                     "name": "Ik zeg: \"Ik wil meer weten over de mogelijke bijwerkingen en andere nadelige effecten.\"",
+                                                                    "count": 0,
                                                                     "parent": "Ik zeg: \"Ik wil graag meer informatie over het onderzoek.\"",
                                                                     "children": [
                                                                         {
                                                                             "name": "Ik zeg: \"Ik heb alle informatie die ik nodig heb om te beslissen of ik wel of niet deel wil nemen aan het onderzoek.\"",
+                                                                            "count": 0,
                                                                             "parent": "Ik zeg: \"Ik wil meer weten over de mogelijke bijwerkingen en andere nadelige effecten.\"",
                                                                             "children": [
                                                                                 {
                                                                                     "name": "Ik zeg: \"Ik denk dat ik niet wil mee doen aan het onderzoek.\"",
+                                                                                    "count": 0,
                                                                                     "parent": "Ik zeg: \"Ik heb alle informatie die ik nodig heb om te beslissen of ik wel of niet deel wil nemen aan het onderzoek.\"",
                                                                                     "children": [
                                                                                         {
                                                                                             "name": ":D ",
+                                                                                            "count": 0,
                                                                                             "parent": "Ik zeg: \"Ik denk dat ik niet wil mee doen aan het onderzoek.\"",
                                                                                             "children": [
                                                                                                 {
                                                                                                     "name": "Nope",
+                                                                                                    "count": 0,
                                                                                                     "parent": ":D ",
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "Ik ben klaar om te beginnen!",
+                                                                                                            "count": 0,
+                                                                                                            "parent": "Nope",
+                                                                                                            "children": []
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "name": "Verder gaan",
+                                                                                                            "count": 0,
+                                                                                                            "parent": "Nope",
+                                                                                                            "children": []
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        },
+                                                                                        {
+                                                                                            "name": "One two three.",
+                                                                                            "count": 0,
+                                                                                            "parent": "Ik zeg: \"Ik denk dat ik niet wil mee doen aan het onderzoek.\"",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "Nope",
+                                                                                                    "count": 0,
+                                                                                                    "parent": "One two three.",
                                                                                                     "children": []
                                                                                                 }
                                                                                             ]
@@ -64,14 +102,171 @@
                                                     ]
                                                 }
                                             ]
+                                        },
+                                        {
+                                            "name": "Ik zeg: \"Ik wil iets anders weten over het onderzoek, namelijk …\"",
+                                            "count": 0,
+                                            "parent": "Verder gaan",
+                                            "children": [
+                                                {
+                                                    "name": "Yes",
+                                                    "count": 0,
+                                                    "parent": "Ik zeg: \"Ik wil iets anders weten over het onderzoek, namelijk …\"",
+                                                    "children": [
+                                                        {
+                                                            "name": "Yes",
+                                                            "count": 0,
+                                                            "parent": "Yes",
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "name": "Verder gaan",
+                                                            "count": 0,
+                                                            "parent": "Yes",
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "Yes or no, does it matter?",
+                                                    "count": 0,
+                                                    "parent": "Ik zeg: \"Ik wil iets anders weten over het onderzoek, namelijk …\"",
+                                                    "children": [
+                                                        {
+                                                            "name": "Yes?",
+                                                            "count": 0,
+                                                            "parent": "Yes or no, does it matter?",
+                                                            "children": [
+                                                                {
+                                                                    "name": "Verder gaan",
+                                                                    "count": 0,
+                                                                    "parent": "Yes?",
+                                                                    "children": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Ik zeg: \"Ik denk dat ik mee wil doen aan het onderzoek, en bespreek het graag met de onderzoeksverpleegkundige.\"",
+                                            "count": 0,
+                                            "parent": "Verder gaan",
+                                            "children": [
+                                                {
+                                                    "name": "Test",
+                                                    "count": 0,
+                                                    "parent": "Ik zeg: \"Ik denk dat ik mee wil doen aan het onderzoek, en bespreek het graag met de onderzoeksverpleegkundige.\"",
+                                                    "children": [
+                                                        {
+                                                            "name": "test",
+                                                            "count": 0,
+                                                            "parent": "Test",
+                                                            "children": [
+                                                                {
+                                                                    "name": "Ik ben klaar om te beginnen!",
+                                                                    "count": 0,
+                                                                    "parent": "test",
+                                                                    "children": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Ik zeg: \"Nee, dank u wel, ik hoef geen informatie. Ik wil niet mee doen aan het onderzoek.",
+                                            "count": 0,
+                                            "parent": "Verder gaan",
+                                            "children": [
+                                                {
+                                                    "name": "Great, yes!",
+                                                    "count": 0,
+                                                    "parent": "Ik zeg: \"Nee, dank u wel, ik hoef geen informatie. Ik wil niet mee doen aan het onderzoek.",
+                                                    "children": [
+                                                        {
+                                                            "name": "Verder gaan",
+                                                            "count": 0,
+                                                            "parent": "Great, yes!",
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Ik zeg: \"Ik wil iets anders weten over het onderzoek, namelijk …\"",
+                                            "count": 0,
+                                            "parent": "Verder gaan",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "Ik zeg: \"Ik denk dat ik niet wil mee doen aan het onderzoek.\"",
+                                            "count": 0,
+                                            "parent": "Verder gaan",
+                                            "children": []
                                         }
                                     ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "No idea what I should fill in here?",
+                            "count": 0,
+                            "parent": "Ik heb weinig vertrouwen dat mijn arts suggesties geeft die waardevol kunnen zijn voor mij.",
+                            "children": [
+                                {
+                                    "name": "Verder gaan",
+                                    "count": 0,
+                                    "parent": "No idea what I should fill in here?",
+                                    "children": []
                                 }
                             ]
                         }
                     ]
                 }
             ]
+        },
+        {
+            "name": "Ik zeg: \"Nee, daar ben ik niet bekend mee. Wat is dat precies?\"",
+            "count": 0,
+            "parent": "Ik ben klaar om te beginnen!",
+            "children": [
+                {
+                    "name": "Ik heb vertrouwen dat mijn arts suggesties geeft die waardevol kunnen zijn voor mij.",
+                    "count": 0,
+                    "parent": "Ik zeg: \"Nee, daar ben ik niet bekend mee. Wat is dat precies?\"",
+                    "children": [
+                        {
+                            "name": "Deze situatie komt niet overeen met mijn eigen ervaring.",
+                            "count": 0,
+                            "parent": "Ik heb vertrouwen dat mijn arts suggesties geeft die waardevol kunnen zijn voor mij.",
+                            "children": [
+                                {
+                                    "name": "Nope",
+                                    "count": 0,
+                                    "parent": "Deze situatie komt niet overeen met mijn eigen ervaring.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Ik heb weinig vertrouwen dat mijn arts suggesties geeft die waardevol kunnen zijn voor mij.",
+                    "count": 0,
+                    "parent": "Ik zeg: \"Nee, daar ben ik niet bekend mee. Wat is dat precies?\"",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Ik zeg: \"Nee, daar ben ik niet bekend mee. Wat is dat precies?\"",
+            "count": 0,
+            "parent": "Ik ben klaar om te beginnen!",
+            "children": []
         }
     ]
 }

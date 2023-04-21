@@ -12,11 +12,11 @@ function transformData(jsonData) {
   // Loop through the JSON data and transform each node
   for (let i = 1; i < jsonData.length; i++) {
     let jsonNode = jsonData[i];
-
+    let node = {};
     // Create a new node with the same properties as the JSON node
-    let node = {
+    node = {
       name: jsonNode.text,
-      count: jsonNode.count,
+      count: 0,
       parent: jsonData[i - 1].text,
       children: [],
     };
@@ -50,25 +50,12 @@ function findNode(parent, node) {
 
 const generateTreeGraph = () => {
   // var json = JSON.parse(data);
-  var oldObj = {};
-  var obj = transformData(data[0].choices);
+  let choicesObj = [];
+  data.forEach(({ choices }) => choicesObj.push(...choices));
 
-  // const choices = data[0].choices;
-  // choices.forEach(({ index, text, type, input }) => {
-  //   var childObj = {
-  //     name: text,
-  //     count: 0,
-  //     children: [],
-  //   };
-  //   obj = {
-  //     name: oldObj.name,
-  //     children: [childObj],
-  //     oldObj,
-  //   };
-  //   oldObj = obj;
-  // });
-
+  var obj = transformData(choicesObj);
+  return obj;
   fs.writeFile("myjsonfile.json", JSON.stringify(obj), "utf8", () => {});
 };
 
-generateTreeGraph();
+export default generateTreeGraph;

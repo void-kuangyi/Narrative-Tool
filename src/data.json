@@ -23,8 +23,8 @@
                 "type": "choice"
             },
             {
-                "title": "Kunt u wat meer vertellen over uw gedachtes bij deze keuze? Wat maakt dat u de suggesties van uw arts vertrouwd?",
-                "text": "Hmmmm, i don't know?",
+                "text": "Kunt u wat meer vertellen over uw gedachtes bij deze keuze? Wat maakt dat u de suggesties van uw arts vertrouwd?",
+                "comment": "Hmmmm, i don't know?",
                 "type": "input"
             },
             {
@@ -63,13 +63,13 @@
                 "type": "choice"
             },
             {
-                "title": "Kunt u meer vertellen over uw gedachtes bij deze keuze? Wat maakt dat u niet mee zou willen doen aan het onderzoek?",
-                "text": ":D ",
+                "text": "Kunt u meer vertellen over uw gedachtes bij deze keuze? Wat maakt dat u niet mee zou willen doen aan het onderzoek?",
+                "comment": ":D ",
                 "type": "input"
             },
             {
-                "title": "Wilt u verder nog iets kwijt?",
-                "text": "Nope",
+                "text": "Wilt u verder nog iets kwijt?",
+                "comment": "Nope",
                 "type": "input"
             }
         ]
@@ -103,8 +103,8 @@
                 "type": "choice"
             },
             {
-                "title": "Kunt u meer vertellen over deze keuze? Wat maakt dat deze situatie niet overeenkomt met uw ervaring?",
-                "text": "Nope",
+                "text": "Kunt u meer vertellen over deze keuze? Wat maakt dat deze situatie niet overeenkomt met uw ervaring?",
+                "comment": "Nope",
                 "type": "input"
             },
             {
@@ -118,13 +118,13 @@
                 "type": "choice"
             },
             {
-                "title": "",
-                "text": "Yes",
+                "text": "",
+                "comment": "Yes",
                 "type": "input"
             },
             {
-                "title": "Zou informatie hierover uw beslissing om wel of niet deel te nemen aan het onderzoek beïnvloeden?",
-                "text": "Yes",
+                "text": "Zou informatie hierover uw beslissing om wel of niet deel te nemen aan het onderzoek beïnvloeden?",
+                "comment": "Yes",
                 "type": "input"
             },
             {
@@ -138,13 +138,13 @@
                 "type": "choice"
             },
             {
-                "title": "Kunt u meer vertellen over uw gedachtes bij deze keuze? Wat maakt dat u mee zou willen doen aan het onderzoek?",
-                "text": "Test",
+                "text": "Kunt u meer vertellen over uw gedachtes bij deze keuze? Wat maakt dat u mee zou willen doen aan het onderzoek?",
+                "comment": "Test",
                 "type": "input"
             },
             {
-                "title": "Wilt u verder nog iets kwijt?",
-                "text": "test",
+                "text": "Wilt u verder nog iets kwijt?",
+                "comment": "test",
                 "type": "input"
             }
         ]
@@ -173,8 +173,8 @@
                 "type": "choice"
             },
             {
-                "title": "Kunt u wat meer vertellen over uw gedachtes bij deze keuze? Wat maakt dat u de suggesties van uw arts vertrouwd?",
-                "text": "No idea what I should fill in here?",
+                "text": "Kunt u wat meer vertellen over uw gedachtes bij deze keuze? Wat maakt dat u de suggesties van uw arts vertrouwd?",
+                "comment": "No idea what I should fill in here?",
                 "type": "input"
             },
             {
@@ -188,8 +188,8 @@
                 "type": "choice"
             },
             {
-                "title": "Kunt u meer vertellen over uw gedachtes bij deze keuze? Wat maakt dat u liever niet mee doet?",
-                "text": "Great, yes!",
+                "text": "Kunt u meer vertellen over uw gedachtes bij deze keuze? Wat maakt dat u liever niet mee doet?",
+                "comment": "Great, yes!",
                 "type": "input"
             },
             {
@@ -203,13 +203,13 @@
                 "type": "choice"
             },
             {
-                "title": "",
-                "text": "Yes or no, does it matter?",
+                "text": "",
+                "comment": "Yes or no, does it matter?",
                 "type": "input"
             },
             {
-                "title": "Zou informatie hierover uw beslissing om wel of niet deel te nemen aan het onderzoek beïnvloeden?",
-                "text": "Yes?",
+                "text": "Zou informatie hierover uw beslissing om wel of niet deel te nemen aan het onderzoek beïnvloeden?",
+                "comment": "Yes?",
                 "type": "input"
             },
             {
@@ -223,13 +223,13 @@
                 "type": "choice"
             },
             {
-                "title": "Kunt u meer vertellen over uw gedachtes bij deze keuze? Wat maakt dat u niet mee zou willen doen aan het onderzoek?",
-                "text": "One two three.",
+                "text": "Kunt u meer vertellen over uw gedachtes bij deze keuze? Wat maakt dat u niet mee zou willen doen aan het onderzoek?",
+                "comment": "One two three.",
                 "type": "input"
             },
             {
-                "title": "Wilt u verder nog iets kwijt?",
-                "text": "Nope",
+                "text": "Wilt u verder nog iets kwijt?",
+                "comment": "Nope",
                 "type": "input"
             }
         ]
