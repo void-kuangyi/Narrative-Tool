@@ -279,6 +279,7 @@ const transformData = (jsonData) => {
     node = {
       name: jsonNode.text,
       count: 0,
+      //TODO: check the grandparent
       parent: jsonData[i - 1].text,
       children: [],
     };
