@@ -1,46 +1,8 @@
 import mergeTrees from "./mergeTrees";
-var fs = require("fs");
+// var fs = require("fs");
 var data = require("./data.json");
 
-const checkIfKeyExists = (jsonArray, key) => {
-  for (let i = 0; i < jsonArray.length; i++) {
-    if (key === jsonArray[i].name) {
-      // console.log(`Key "${key}" already exists in element ${i}.`);
-      return true;
-    }
-  }
-  return false;
-};
-
-const findNode = (parent, node) => {
-  if (node.name === parent) {
-    return node;
-  } else {
-    for (let i = 0; i < node.children.length; i++) {
-      let found = findNode(parent, node.children[i]);
-      if (found) {
-        return found;
-      }
-    }
-    return null;
-  }
-};
-
-// const bfs = (root, nodes) => {
-//   const queue = [root];
-//   const n = nodes;
-//   while (queue.length > 0) {
-//     const current = queue.shift();
-//     const currentNode = n.shift();
-//     console.log(current.name);
-//     for (const child of current.children) {
-//       queue.push(child);
-//     }
-//   }
-//   return null;
-// };
-
-function generateNodes(Nodes) {
+const generateTreeNodes = (Nodes) => {
   let rootNode = {
     name: "root",
     count: 0,
@@ -53,7 +15,7 @@ function generateNodes(Nodes) {
     currentParentNode = newNode;
   }
   return rootNode.children;
-}
+};
 
 const transformData = (choices) => {
   // Create a root node for the transformed data
@@ -76,16 +38,10 @@ const transformData = (choices) => {
         parent: index == 0 ? "root" : choicesObj[index - 1].text,
         children: [],
       };
-      // let parentNode = findNode(node.parent, nodes);
-      // if (parentNode) {
-      //   parentNode.children.push(node);
-      // } else {
-      //   nodes.children.push(node);
-      // }
       nodes.push(node);
     }
 
-    const treeNodes = generateNodes(nodes);
+    const treeNodes = generateTreeNodes(nodes);
     const treeeNodesObj = {
       name: "root",
       count: 0,
@@ -94,16 +50,6 @@ const transformData = (choices) => {
     console.log("treeNodes", treeeNodesObj);
     rootNode = mergeTrees(rootNode, treeeNodesObj);
     console.log(rootNode);
-    // Add the node to its parent's children array
-    //   let parentNode = findNode(node.parent, rootNode);
-    //   if (parentNode) {
-    //     if (!checkIfKeyExists(parentNode.children, node.name)) {
-    //       parentNode.children.push(node);
-    //     }
-    //   } else {
-    //     rootNode.children.push(node);
-    //   }
-    // }
   }
 
   // Return the transformed data
