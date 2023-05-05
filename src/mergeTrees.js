@@ -12,6 +12,7 @@ function mergeTrees(tree1, tree2) {
     tree1.children.push(tree2);
   } else {
     // 如果在tree1中找到了与tree2节点名字相同的节点，则递归合并子树
+    node.count = node.count + 1;
     mergeTrees(node, tree2.children[0]);
   }
 

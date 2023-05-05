@@ -10,7 +10,7 @@ const generateTreeNodes = (Nodes) => {
   };
   let currentParentNode = rootNode;
   for (const node of Nodes) {
-    const newNode = { name: node.name, children: [] };
+    const newNode = { name: node.name, count: 1, children: [] };
     currentParentNode.children.push(newNode);
     currentParentNode = newNode;
   }
@@ -34,7 +34,7 @@ const transformData = (choices) => {
       // Create a new node with the same properties as the JSON node
       let node = {
         name: choicesObj[index].text,
-        count: 0,
+        count: 1,
         parent: index == 0 ? "root" : choicesObj[index - 1].text,
         children: [],
       };
