@@ -6,15 +6,11 @@ const renderForeignObjectNode = ({
   const peopleCount = nodeDatum.count;
   const dynamicSize = 1.5 * (Math.log(peopleCount) / Math.log(1.2)) + 10;
   const isInput = nodeDatum.type == "input";
-  const comments = [
-    "Lorem ipsum dolor sit amet,laboris nisi ut aliqut in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-    "lalalala,hello",
-  ];
+  const comments = nodeDatum.comment;
   return (
-    <g>
+    <g onClick={toggleNode}>
       <circle
         r={dynamicSize}
-        onClick={toggleNode}
         style={
           isInput
             ? { fill: "#D9E5FF", stroke: "none" }

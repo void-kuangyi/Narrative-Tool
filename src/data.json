@@ -233,5 +233,155 @@
                 "type": "input"
             }
         ]
+    },
+    {
+        "id": 93,
+        "resource_id": "ub6372d5cceda40af",
+        "ts": "2023-05-05T17:36:16",
+        "pp1": "",
+        "pp2": "",
+        "pp3": "",
+        "choices": [
+            {
+                "index": 0,
+                "text": "Ik ben klaar om te beginnen!",
+                "type": "choice"
+            },
+            {
+                "index": 1,
+                "text": "Ik zeg: \"Ja, daar heb ik wel eens van gehoord\".",
+                "type": "choice"
+            },
+            {
+                "index": 0,
+                "text": "Ik heb vertrouwen dat mijn arts suggesties geeft die waardevol kunnen zijn voor mij.",
+                "type": "choice"
+            },
+            {
+                "index": 1,
+                "text": "Ik zeg: \"Nee, dank u wel, ik hoef geen informatie. Ik wil niet mee doen aan het onderzoek.",
+                "type": "choice"
+            },
+            {
+                "text": "Kunt u meer vertellen over uw gedachtes bij deze keuze? Wat maakt dat u liever niet mee doet?",
+                "comment": "I don't feel like being tested",
+                "type": "input"
+            },
+            {
+                "index": 0,
+                "text": "Verder gaan",
+                "type": "choice"
+            },
+            {
+                "index": 3,
+                "text": "Ik zeg: \"Ik wil iets anders weten over het onderzoek, namelijk …\"",
+                "type": "choice"
+            },
+            {
+                "text": "",
+                "comment": "What has been tested?",
+                "type": "input"
+            },
+            {
+                "text": "Zou informatie hierover uw beslissing om wel of niet deel te nemen aan het onderzoek beïnvloeden?",
+                "comment": "Yes",
+                "type": "input"
+            },
+            {
+                "index": 0,
+                "text": "Verder gaan",
+                "type": "choice"
+            },
+            {
+                "index": 1,
+                "text": "Ik zeg: \"Ik denk dat ik niet wil mee doen aan het onderzoek.\"",
+                "type": "choice"
+            },
+            {
+                "text": "Kunt u meer vertellen over uw gedachtes bij deze keuze? Wat maakt dat u niet mee zou willen doen aan het onderzoek?",
+                "comment": "Hmmmm i just dont want",
+                "type": "input"
+            },
+            {
+                "text": "Wilt u verder nog iets kwijt?",
+                "comment": "Nope i am good",
+                "type": "input"
+            }
+        ]
+    },
+    {
+        "id": 222,
+        "resource_id": "ub6372d5cceda40af",
+        "ts": "2023-05-05T17:36:16",
+        "pp1": "",
+        "pp2": "",
+        "pp3": "",
+        "choices": [
+            {
+                "index": 0,
+                "text": "Ik ben klaar om te beginnen!",
+                "type": "choice"
+            },
+            {
+                "index": 0,
+                "text": "Ik zeg: \"Nee, daar ben ik niet bekend mee. Wat is dat precies?\"",
+                "type": "choice"
+            },
+            {
+                "index": 1,
+                "text": "Ik heb weinig vertrouwen dat mijn arts suggesties geeft die waardevol kunnen zijn voor mij.",
+                "type": "choice"
+            },
+            {
+                "text": "Kunt u wat meer vertellen over uw gedachtes bij deze keuze? Wat maakt dat u de suggesties van uw arts vertrouwd?",
+                "comment": "Because i don't trust the system that much",
+                "type": "input"
+            },
+            {
+                "index": 0,
+                "text": "Verder gaan",
+                "type": "choice"
+            },
+            {
+                "index": 0,
+                "text": "Ik zeg: \"Ja graag, ik ben benieuwd naar het onderzoek, en wil hier graag meer informatie over.\"",
+                "type": "choice"
+            },
+            {
+                "index": 3,
+                "text": "Ik zeg: \"Ik wil iets anders weten over het onderzoek, namelijk …\"",
+                "type": "choice"
+            },
+            {
+                "text": "",
+                "comment": "How many people have been tested",
+                "type": "input"
+            },
+            {
+                "text": "Zou informatie hierover uw beslissing om wel of niet deel te nemen aan het onderzoek beïnvloeden?",
+                "comment": "Of course",
+                "type": "input"
+            },
+            {
+                "index": 0,
+                "text": "Verder gaan",
+                "type": "choice"
+            },
+            {
+                "index": 0,
+                "text": "Ik zeg: \"Ik denk dat ik mee wil doen aan het onderzoek, en bespreek het graag met de onderzoeksverpleegkundige.\"",
+                "type": "choice"
+            },
+            {
+                "text": "Kunt u meer vertellen over uw gedachtes bij deze keuze? Wat maakt dat u mee zou willen doen aan het onderzoek?",
+                "comment": "Hmmm just think it is important to try out the research",
+                "type": "input"
+            },
+            {
+                "text": "Wilt u verder nog iets kwijt?",
+                "comment": "I am good thanks",
+                "type": "input"
+            }
+        ]
     }
 ]

@@ -6,7 +6,7 @@ import renderForeignObjectNode from "./styleNode";
 
 function App() {
   const data = generateTreeGraph();
-  const foreignObjectProps = { width: 300, height: 300, x: 50, y: -30 };
+  const foreignObjectProps = { width: 200, height: 300, x: 50, y: -30 };
   return (
     <div className="App">
       <Tree

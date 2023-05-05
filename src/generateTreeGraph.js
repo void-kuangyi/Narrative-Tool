@@ -10,7 +10,15 @@ const generateTreeNodes = (Nodes) => {
   };
   let currentParentNode = rootNode;
   for (const node of Nodes) {
-    const newNode = { name: node.name, count: 1, children: [] };
+    let newNode = {
+      name: node.name,
+      count: node.count,
+      type: node.type,
+      children: [],
+    };
+    if (newNode.type == "input") {
+      newNode.comment = node.comment;
+    }
     currentParentNode.children.push(newNode);
     currentParentNode = newNode;
   }
@@ -35,9 +43,13 @@ const transformData = (choices) => {
       let node = {
         name: choicesObj[index].text,
         count: 1,
+        type: choicesObj[index].type,
         parent: index == 0 ? "root" : choicesObj[index - 1].text,
         children: [],
       };
+      if (node.type === "input") {
+        node.comment = [choicesObj[index].comment];
+      }
       nodes.push(node);
     }
 
