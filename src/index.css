@@ -11,8 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.styled-scrollbars {
-  /* Foreground, Background */
-  scrollbar-color: #D9E5FF;
-}

@@ -1,16 +1,17 @@
 import "./App.css";
 import React from "react";
 import { Tree } from "react-d3-tree";
-import generateTreeGraph from "./generateTreeGraph";
+import transformData from "./transformData";
 import renderForeignObjectNode from "./styleNode";
 
 function App() {
-  const data = generateTreeGraph();
+  var data = require("./data.json");
+  const transformedData = transformData(data);
   const foreignObjectProps = { width: 200, height: 300, x: 50, y: -30 };
   return (
     <div className="App">
       <Tree
-        data={data}
+        data={transformedData}
         pathClassFunc={() => "custom-link"}
         orientation="vertical"
         hasInteractiveNodes="true"
