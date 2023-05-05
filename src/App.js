@@ -6,7 +6,7 @@ import renderForeignObjectNode from "./styleNode";
 
 function App() {
   const data = generateTreeGraph();
-  const foreignObjectProps = { width: 120, height: 300, x: 10 };
+  const foreignObjectProps = { width: 300, height: 300, x: 50, y: -30 };
   return (
     <div className="App">
       <Tree
@@ -17,7 +17,7 @@ function App() {
         renderCustomNodeElement={(rd3tProps) =>
           renderForeignObjectNode({ ...rd3tProps, foreignObjectProps })
         }
-        nodeSize={{ x: 120, y: 300 }}
+        nodeSize={{ x: 300, y: 300 }}
         translate={{ x: window.screen.width / 2, y: 100 }}
       />
     </div>
