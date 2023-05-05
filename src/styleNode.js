@@ -40,6 +40,9 @@ const renderForeignObjectNode = ({
                 borderRadius: "8px",
                 minHeight: "0px",
                 overflow: "auto",
+                display: "flex",
+                flexDirection: "column",
+                rowGap: "10px",
               }}
             >
               {comments.map((comment) => (
@@ -48,7 +51,6 @@ const renderForeignObjectNode = ({
                   style={{
                     backgroundColor: "white",
                     borderRadius: "8px",
-                    marginBottom: "10px",
                     padding: "12px",
                   }}
                 >
