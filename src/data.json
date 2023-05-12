@@ -10,7 +10,9 @@
             {
                 "index": 0,
                 "text": "Ik ben klaar om te beginnen!",
-                "type": "choice"
+                "type": "choice",
+                "colour": "#dsdsd",
+                "tag": "string..."
             },
             {
                 "index": 1,
