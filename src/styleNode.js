@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 const renderForeignObjectNode = ({
   nodeDatum,
   toggleNode,
@@ -21,7 +24,7 @@ const renderForeignObjectNode = ({
         text-anchor="middle"
         alignment-baseline="central"
         fill="white"
-        font-size={dynamicSize}
+        font-size="1rem"
         stroke-width="0px"
       >
         {peopleCount}
@@ -31,7 +34,7 @@ const renderForeignObjectNode = ({
         <div
           style={{ display: "flex", flexDirection: "column", height: "100%" }}
         >
-          <h3 style={{ fontWeight: 300 }}>{nodeDatum.name}</h3>
+          <span class="nodeText" style={{ fontWeight: 300 }}>{nodeDatum.name}</span>
           {isInput && (
             <div
               style={{

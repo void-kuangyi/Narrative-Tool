@@ -5,7 +5,8 @@ import transformData from "./transformData";
 import renderForeignObjectNode from "./styleNode";
 
 function App() {
-  var data = require("./data.json");
+  var data = window.narrativeSurveyDataJson;
+  // var data = require("./data.json");
   const transformedData = transformData(data);
   const foreignObjectProps = { width: 200, height: 300, x: 50, y: -30 };
   return (

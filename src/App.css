@@ -1,9 +1,10 @@
 .App {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  width: 100%;
+  overflow-y: auto;
+  height: calc(100vh - 250px);
+  position: relative;
+  background: white;
+  font-size: 0.8rem;
   overflow: auto;
 }
 
