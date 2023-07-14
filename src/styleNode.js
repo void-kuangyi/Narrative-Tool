@@ -8,10 +8,10 @@ const renderForeignObjectNode = ({
 }) => {
   const peopleCount = nodeDatum.count;
   const dynamicSize = 1.5 * (Math.log(peopleCount) / Math.log(1.2)) + 10;
-  const isInput = nodeDatum.type == "input";
+  const isInput = nodeDatum.type === "input";
   const comments = nodeDatum.comment;
   return (
-    <g onClick={toggleNode}>
+    <g>
       <circle
         r={dynamicSize}
         style={
@@ -19,6 +19,7 @@ const renderForeignObjectNode = ({
             ? { fill: "#D9E5FF", stroke: "none" }
             : { fill: "#4355A3", stroke: "none" }
         }
+        onClick={toggleNode}
       ></circle>
       <text
         text-anchor="middle"
@@ -26,6 +27,7 @@ const renderForeignObjectNode = ({
         fill="white"
         font-size="1rem"
         stroke-width="0px"
+        onClick={toggleNode}
       >
         {peopleCount}
       </text>
@@ -34,7 +36,9 @@ const renderForeignObjectNode = ({
         <div
           style={{ display: "flex", flexDirection: "column", height: "100%" }}
         >
-          <span class="nodeText" style={{ fontWeight: 300 }}>{nodeDatum.name}</span>
+          <span class="nodeText" style={{ fontWeight: 300 }}>
+            {nodeDatum.name}
+          </span>
           {isInput && (
             <div
               style={{

@@ -24,7 +24,7 @@ const mergeTrees = (tree1, tree2) => {
     tree1.children.push(tree2);
   } else {
     node.count = node.count + 1;
-    if (node.type == "input") {
+    if (node.type === "input") {
       node.comment = node.comment.concat(tree2.comment);
     }
     mergeTrees(node, tree2.children[0]);
