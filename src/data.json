@@ -10,14 +10,18 @@
             {
                 "index": 0,
                 "text": "Ik ben klaar om te beginnen!",
-                "type": "choice",
-                "colour": "#dsdsd",
-                "tag": "string..."
+                "type": "choice"
             },
             {
                 "index": 1,
                 "text": "Ik zeg: \"Ja, daar heb ik wel eens van gehoord\".",
-                "type": "choice"
+                "type": "choice",
+                "tags": [
+                    {
+                        "name": "story",
+                        "color": "green"
+                    }
+                ]
             },
             {
                 "index": 1,
@@ -27,7 +31,17 @@
             {
                 "text": "Kunt u wat meer vertellen over uw gedachtes bij deze keuze? Wat maakt dat u de suggesties van uw arts vertrouwd?",
                 "comment": "Hmmmm, i don't know?",
-                "type": "input"
+                "type": "input",
+                "tags": [
+                    {
+                        "name": "question",
+                        "color": "orange"
+                    },
+                    {
+                        "name": "important",
+                        "color": "red"
+                    }
+                ]
             },
             {
                 "index": 0,
@@ -42,7 +56,13 @@
             {
                 "index": 0,
                 "text": "Ik zeg: \"Ik wil meer weten over de praktische zaken van het onderzoek: de duur, het aantal bezoeken, de metingen, en de vergoeding.\"",
-                "type": "choice"
+                "type": "choice",
+                "tags": [
+                    {
+                        "name": "story",
+                        "color": "green"
+                    }
+                ]
             },
             {
                 "index": 0,
@@ -72,7 +92,17 @@
             {
                 "text": "Wilt u verder nog iets kwijt?",
                 "comment": "Nope",
-                "type": "input"
+                "type": "input",
+                "tags": [
+                    {
+                        "name": "question",
+                        "color": "orange"
+                    },
+                    {
+                        "name": "important",
+                        "color": "red"
+                    }
+                ]
             }
         ]
     },
@@ -252,7 +282,13 @@
             {
                 "index": 1,
                 "text": "Ik zeg: \"Ja, daar heb ik wel eens van gehoord\".",
-                "type": "choice"
+                "type": "choice",
+                "tags": [
+                    {
+                        "name": "story",
+                        "color": "green"
+                    }
+                ]
             },
             {
                 "index": 0,

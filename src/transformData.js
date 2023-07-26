@@ -29,6 +29,9 @@ const transformChoicePerParticipant = (choices) => {
     if (node.type === "input") {
       node.comment = [choice.comment];
     }
+    if (node.tag !== "undefined") {
+      node.tags = choice.tags;
+    }
     nodes.push(node);
   }
   return nodes;
