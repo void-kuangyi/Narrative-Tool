@@ -20,13 +20,39 @@
                     {
                         "name": "story",
                         "color": "green"
+                    },
+                    {
+                        "name": "important",
+                        "color": "red"
+                    },
+                    {
+                        "name": "good to know",
+                        "color": "purple"
+                    },
+                    {
+                        "name": "positive",
+                        "color": "blue"
                     }
                 ]
             },
             {
                 "index": 1,
                 "text": "Ik heb weinig vertrouwen dat mijn arts suggesties geeft die waardevol kunnen zijn voor mij.",
-                "type": "choice"
+                "type": "choice",
+                "tags": [
+                    {
+                        "name": "story",
+                        "color": "green"
+                    },
+                    {
+                        "name": "important",
+                        "color": "red"
+                    },
+                    {
+                        "name": "negative",
+                        "color": "yellow"
+                    }
+                ]
             },
             {
                 "text": "Kunt u wat meer vertellen over uw gedachtes bij deze keuze? Wat maakt dat u de suggesties van uw arts vertrouwd?",
@@ -282,13 +308,7 @@
             {
                 "index": 1,
                 "text": "Ik zeg: \"Ja, daar heb ik wel eens van gehoord\".",
-                "type": "choice",
-                "tags": [
-                    {
-                        "name": "story",
-                        "color": "green"
-                    }
-                ]
+                "type": "choice"
             },
             {
                 "index": 0,
