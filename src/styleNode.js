@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
 
 // The color map is based on https://github.com/klembot/twinejs/blob/0b724a7fe7dd3c0c161ed1abc861e4188946ed02/src/styles/colors.css#L64
 const colorMap = {
@@ -9,6 +8,19 @@ const colorMap = {
   green: "#0ac220",
   blue: "#3d93f5",
   purple: "#9f3df5",
+};
+
+const toggleComments = (id) => {
+  var x = document.getElementById(id);
+  if (x.style.visibility === "hidden") {
+    x.style.visibility = "visible";
+    x.style.opacity = 1;
+    x.style.transition = "opacity 1s linear";
+  } else {
+    x.style.visibility = "hidden";
+    x.style.opacity = 0;
+    x.style.transition = "visibility 0s 1s, opacity 1s linear";
+  }
 };
 
 const renderForeignObjectNode = ({
@@ -21,6 +33,7 @@ const renderForeignObjectNode = ({
   const isInput = nodeDatum.type === "input";
   const comments = nodeDatum.comment;
   const tags = nodeDatum.tags;
+  const id = "comments_" + nodeDatum["__rd3t"].id;
   return (
     <g>
       <circle
@@ -68,7 +81,7 @@ const renderForeignObjectNode = ({
                     textAlign: "center",
                     fontWeight: "600",
                     borderRadius: "12px",
-                    color: tag.color != "yellow" && "white",
+                    color: tag.color !== "yellow" && "white",
                     width: "fit-content",
                   }}
                 >
@@ -76,34 +89,62 @@ const renderForeignObjectNode = ({
                 </span>
               ))}
           </div>
-          <span className="nodeText" style={{ fontWeight: 300 }}>
-            {nodeDatum.name}
-          </span>
-          {isInput && (
-            <div
-              style={{
-                padding: "10px",
-                backgroundColor: "#D9E5FF",
-                borderRadius: "8px",
-                minHeight: "0px",
-                overflow: "auto",
-                display: "flex",
-                flexDirection: "column",
-                rowGap: "10px",
+          {comments ? (
+            <span
+              className="nodeText"
+              style={{ fontWeight: 300 }}
+              onClick={() => {
+                isInput && toggleComments(id);
               }}
             >
-              {comments.map((comment) => (
-                <div
-                  className="comment"
-                  style={{
-                    backgroundColor: "white",
-                    borderRadius: "8px",
-                    padding: "12px",
-                  }}
-                >
-                  {comment}
-                </div>
-              ))}
+              <details>
+                <summary>{nodeDatum.name}</summary>
+              </details>
+            </span>
+          ) : (
+            <span
+              className="nodeText"
+              style={{ fontWeight: 300 }}
+              onClick={() => {
+                isInput && toggleComments(id);
+              }}
+            >
+              {nodeDatum.name}
+            </span>
+          )}
+          {isInput && (
+            <div
+              id={id}
+              style={{
+                overflow: "auto",
+                visibility: "hidden",
+                opacity: 0,
+              }}
+            >
+              <div
+                style={{
+                  padding: "10px",
+                  backgroundColor: "#D9E5FF",
+                  borderRadius: "8px",
+                  minHeight: "0px",
+                  display: "flex",
+                  flexDirection: "column",
+                  rowGap: "10px",
+                }}
+              >
+                {comments.map((comment) => (
+                  <div
+                    className="comment"
+                    style={{
+                      backgroundColor: "white",
+                      borderRadius: "8px",
+                      padding: "12px",
+                    }}
+                  >
+                    {comment}
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </div>
