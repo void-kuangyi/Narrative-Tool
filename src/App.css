@@ -1,11 +1,15 @@
 .App {
-  width: 100%;
-  overflow-y: auto;
-  height: calc(100vh);
+  background: #4355A3;
+  font-size: 0.8rem;
+  padding: 12px;
+}
+
+.Tree {
+  height: calc(100vh - 24px - 35.45px);
   position: relative;
   background: white;
   font-size: 0.8rem;
-  overflow: auto;
+  border-radius: 12px;
 }
 
 .custom-link {
@@ -14,18 +18,18 @@
 }
 
 /* width */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 5px;
-}
+} */
 
 /* Track */
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   background-color: white;
-}
+} */
  
 /* Handle */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: #F5F5F5; 
   scrollbar-width: none;
   border-radius: 10px;
-}
+} */
