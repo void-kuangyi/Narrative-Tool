@@ -4,34 +4,87 @@ import { Tree } from "react-d3-tree";
 import transformData from "./transformData";
 import renderForeignObjectNode from "./styleNode";
 
+const Comments = ({ comments }) => {
+  return (
+    <div
+      id="comments"
+      style={{
+        overflowY: "auto",
+        padding: "10px",
+        backgroundColor: "#D9E5FF",
+        borderRadius: "8px",
+        minHeight: "0px",
+        visibility: "hidden",
+        width: "0px",
+        display: "flex",
+        flexDirection: "column",
+        rowGap: "10px",
+        transition: "0.5s",
+      }}
+    >
+      {comments.map((comment) => (
+        <div
+          className="comment"
+          style={{
+            backgroundColor: "white",
+            borderRadius: "8px",
+            padding: "12px",
+          }}
+        >
+          {comment}
+        </div>
+      ))}
+    </div>
+  );
+};
+const Title = () => (
+  <span
+    style={{
+      fontSize: "30px",
+      color: "white",
+      fontWeight: "600",
+    }}
+  >
+    TwineJS Researcher Web
+  </span>
+);
+
 function App() {
   // var data = window.narrativeSurveyDataJson;
+  const [comments, setComments] = React.useState([]);
+  console.log(comments);
+  const callBackComments = (comments) => {
+    setComments(comments);
+  };
   var data = require("./data.json");
   const transformedData = transformData(data);
   const foreignObjectProps = { width: 400, height: 300, x: 50, y: -10 };
   return (
     <div className="App">
-      <span
+      <Title />
+      <div
+        className="Tree"
         style={{
-          fontSize: "30px",
-          color: "white",
-          fontWeight: "600",
+          display: "flex",
+          flexDirection: "row",
         }}
       >
-        TwineJS Researcher Web
-      </span>
-      <div className="Tree">
         <Tree
           data={transformedData}
           pathClassFunc={() => "custom-link"}
           orientation="vertical"
           hasInteractiveNodes="true"
           renderCustomNodeElement={(rd3tProps) =>
-            renderForeignObjectNode({ ...rd3tProps, foreignObjectProps })
+            renderForeignObjectNode({
+              ...rd3tProps,
+              foreignObjectProps,
+              callBackComments,
+            })
           }
           nodeSize={{ x: 300, y: 300 }}
           translate={{ x: window.screen.width / 2, y: 100 }}
         />
+        <Comments comments={comments} />
       </div>
     </div>
   );

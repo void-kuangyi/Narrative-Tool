@@ -10,16 +10,14 @@ const colorMap = {
   purple: "#9f3df5",
 };
 
-const toggleComments = (id) => {
-  var x = document.getElementById(id);
+const toggleComments = () => {
+  var x = document.getElementById("comments");
   if (x.style.visibility === "hidden") {
+    x.style.width = "250px";
     x.style.visibility = "visible";
-    x.style.opacity = 1;
-    x.style.transition = "opacity 1s linear";
-  } else {
+  } else if (x.style.visibility == "visible") {
+    x.style.width = "0px";
     x.style.visibility = "hidden";
-    x.style.opacity = 0;
-    x.style.transition = "visibility 0s 1s, opacity 1s linear";
   }
 };
 
@@ -27,6 +25,7 @@ const renderForeignObjectNode = ({
   nodeDatum,
   toggleNode,
   foreignObjectProps,
+  callBackComments,
 }) => {
   const peopleCount = nodeDatum.count;
   const dynamicSize = 1.5 * (Math.log(peopleCount) / Math.log(1.2)) + 10;
@@ -94,7 +93,8 @@ const renderForeignObjectNode = ({
               className="nodeText"
               style={{ fontWeight: 300 }}
               onClick={() => {
-                isInput && toggleComments(id);
+                isInput && callBackComments(comments);
+                toggleComments();
               }}
             >
               <details>
@@ -102,13 +102,7 @@ const renderForeignObjectNode = ({
               </details>
             </span>
           ) : (
-            <span
-              className="nodeText"
-              style={{ fontWeight: 300 }}
-              onClick={() => {
-                isInput && toggleComments(id);
-              }}
-            >
+            <span className="nodeText" style={{ fontWeight: 300 }}>
               {nodeDatum.name}
             </span>
           )}
