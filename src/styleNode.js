@@ -1,4 +1,7 @@
 import React from "react";
+import { Badge } from "@mui/material";
+import MessageOutlinedIcon from "@mui/icons-material/MessageOutlined";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 // The color map is based on https://github.com/klembot/twinejs/blob/0b724a7fe7dd3c0c161ed1abc861e4188946ed02/src/styles/colors.css#L64
 const colorMap = {
@@ -9,6 +12,14 @@ const colorMap = {
   blue: "#3d93f5",
   purple: "#9f3df5",
 };
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#D9E5FF",
+    },
+  },
+});
 
 const toggleComments = () => {
   var x = document.getElementById("comments");
@@ -88,59 +99,32 @@ const renderForeignObjectNode = ({
                 </span>
               ))}
           </div>
-          {comments ? (
-            <span
-              className="nodeText"
-              style={{ fontWeight: 300 }}
-              onClick={() => {
-                isInput && callBackComments(comments);
-                toggleComments();
-              }}
-            >
-              <details>
-                <summary>{nodeDatum.name}</summary>
-              </details>
-            </span>
-          ) : (
-            <span className="nodeText" style={{ fontWeight: 300 }}>
-              {nodeDatum.name}
-            </span>
-          )}
-          {isInput && (
-            <div
-              id={id}
-              style={{
-                overflow: "auto",
-                visibility: "hidden",
-                opacity: 0,
-              }}
-            >
+          <ThemeProvider theme={theme}>
+            <div>
               <div
-                style={{
-                  padding: "10px",
-                  backgroundColor: "#D9E5FF",
-                  borderRadius: "8px",
-                  minHeight: "0px",
-                  display: "flex",
-                  flexDirection: "column",
-                  rowGap: "10px",
-                }}
+                style={{ fontWeight: 300, marginBottom: "10px" }}
+                onClick={() => {}}
               >
-                {comments.map((comment) => (
-                  <div
-                    className="comment"
-                    style={{
-                      backgroundColor: "white",
-                      borderRadius: "8px",
-                      padding: "12px",
-                    }}
-                  >
-                    {comment}
-                  </div>
-                ))}
+                {nodeDatum.name}
               </div>
+              {comments && (
+                <Badge
+                  badgeContent={comments.length}
+                  color="primary"
+                  onClick={() => {
+                    callBackComments(comments);
+                    toggleComments();
+                  }}
+                >
+                  <MessageOutlinedIcon
+                    style={{
+                      stroke: "none",
+                    }}
+                  />
+                </Badge>
+              )}
             </div>
-          )}
+          </ThemeProvider>
         </div>
       </foreignObject>
     </g>

@@ -10,6 +10,7 @@ const Comments = ({ comments }) => {
       id="comments"
       style={{
         overflowY: "auto",
+        overflowX: "hidden",
         padding: "10px",
         backgroundColor: "#D9E5FF",
         borderRadius: "8px",
@@ -52,13 +53,12 @@ const Title = () => (
 function App() {
   // var data = window.narrativeSurveyDataJson;
   const [comments, setComments] = React.useState([]);
-  console.log(comments);
   const callBackComments = (comments) => {
     setComments(comments);
   };
   var data = require("./data.json");
   const transformedData = transformData(data);
-  const foreignObjectProps = { width: 400, height: 300, x: 50, y: -10 };
+  const foreignObjectProps = { width: 300, height: 200, x: 50, y: -10 };
   return (
     <div className="App">
       <Title />
@@ -81,7 +81,7 @@ function App() {
               callBackComments,
             })
           }
-          nodeSize={{ x: 300, y: 300 }}
+          nodeSize={{ x: 300, y: 200 }}
           translate={{ x: window.screen.width / 2, y: 100 }}
         />
         <Comments comments={comments} />
