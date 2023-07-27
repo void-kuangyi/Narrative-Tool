@@ -58,7 +58,27 @@ function App() {
   };
   var data = require("./data.json");
   const transformedData = transformData(data);
-  const foreignObjectProps = { width: 300, height: 200, x: 50, y: -10 };
+  const foreignObjectProps = { width: 200, height: 200, x: 50, y: -10 };
+  const renderTree = React.useMemo(
+    () => (
+      <Tree
+        data={transformedData}
+        pathClassFunc={() => "custom-link"}
+        orientation="vertical"
+        hasInteractiveNodes="true"
+        renderCustomNodeElement={(rd3tProps) =>
+          renderForeignObjectNode({
+            ...rd3tProps,
+            foreignObjectProps,
+            callBackComments,
+          })
+        }
+        nodeSize={{ x: 300, y: 200 }}
+        translate={{ x: window.screen.width / 2, y: 100 }}
+      />
+    ),
+    []
+  );
   return (
     <div className="App">
       <Title />
@@ -69,21 +89,7 @@ function App() {
           flexDirection: "row",
         }}
       >
-        <Tree
-          data={transformedData}
-          pathClassFunc={() => "custom-link"}
-          orientation="vertical"
-          hasInteractiveNodes="true"
-          renderCustomNodeElement={(rd3tProps) =>
-            renderForeignObjectNode({
-              ...rd3tProps,
-              foreignObjectProps,
-              callBackComments,
-            })
-          }
-          nodeSize={{ x: 300, y: 200 }}
-          translate={{ x: window.screen.width / 2, y: 100 }}
-        />
+        {renderTree}
         <Comments comments={comments} />
       </div>
     </div>
